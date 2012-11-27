@@ -31,6 +31,16 @@ public class WhiteSpaceReplaceTest {
 	}
 	
 	@Test
+	public void eplaceWhiteSpaceNotEnough() {
+		String str = "Hello World, OK!";
+		char[] input = str.toCharArray();
+		WhiteSpaceReplace wsr = new WhiteSpaceReplace();
+		wsr.replaceWhiteSpace(input);
+		char[] expected = input;
+		Assert.assertEquals(expected, input);
+	}
+	
+	@Test
 	public void eplaceWhiteSpaceNullTest() {
 		String str = null;
 		char[] result = replace(str);

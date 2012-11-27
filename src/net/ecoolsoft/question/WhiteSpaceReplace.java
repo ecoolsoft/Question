@@ -21,6 +21,9 @@ public class WhiteSpaceReplace {
 		//两个指针，分别指向原字符数组末尾和新字符数组末尾
 		int indexEnd = i-1;
 		int indexNewEnd = indexEnd + num * 2;
+		if(input.length < indexNewEnd+1) {
+			return;
+		}
 		for(int j=indexEnd; j>=0; j--) {
 			/*if(input[j] == ' ') {
 				for(int k=indexEnd; k>j; k--) {
@@ -37,7 +40,7 @@ public class WhiteSpaceReplace {
 				input[indexNewEnd--] = '0';
 				input[indexNewEnd--] = '2';
 				input[indexNewEnd--] = '%';
-				indexEnd = j-1;
+				//indexEnd = j-1;
 			}
 		}
 		output(input);
